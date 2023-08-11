@@ -1,0 +1,43 @@
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+
+
+.miscellaneous-info h3 {
+    color: $bg-secondary;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 600; }
+
+.miscellaneous-info h4 {
+    color: $bg-secondary;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    font-weight: 520; }
+
+
+.miscellaneous-info a:hover > * {
+    color: #dbdada;
+}
+
+.miscellaneous-info a:hover{
+    background-color: rgb(85, 81, 81);
+}
+
+.miscellaneous-info p {
+    color: #bab0b0;
+   }
+
+.divider{
+    border-top-color: #46423f;
+    margin-bottom: 70px;
+    margin-top:20px;
+    border-top-width: 1.3px;
+}
+
+.divider-table{
+    border-top-color: #393633;
+    margin-bottom: 40px;
+    margin-top:40px;
+    border-top-width: 1.3px;
+}

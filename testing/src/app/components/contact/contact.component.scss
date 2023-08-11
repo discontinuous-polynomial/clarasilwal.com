@@ -1,0 +1,65 @@
+
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+
+
+
+.notes-info h3 {
+    color: $bg-secondary;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 600; }
+
+    .notes-info p {
+    color: #bab0b0;
+    }
+    
+.horizontal-flex{
+    // height:403px;;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+}
+.vertical-flex{
+    height: 410px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.notes-info img { 
+    // margin-top:10em;
+    margin-bottom:30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px;
+    width: auto;
+}
+
+// .contact-form{
+//     padding-top: 7em;
+//     padding-bottom:7em;
+// }
+
+@media (max-width: 800px){
+    .horizontal-flex {
+        flex-direction: column;
+        gap:10px;
+
+    }
+    .notes-info h3  {  
+        text-align:center;
+    }
+    .vertical-flex{
+        gap:20px;
+        height: auto;
+    }
+    .notes-info img { 
+        display: none;
+    }
+}
+ 

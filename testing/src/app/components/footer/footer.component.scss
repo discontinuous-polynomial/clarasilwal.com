@@ -1,0 +1,22 @@
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+.footer {
+  color: #666262;
+  margin:0%;
+  text-align: center;
+  // padding-bottom: 1em ;
+  width:100%;
+}
+
+.footer-divider{
+  margin-top:2em;
+  border-top-color:#434040;
+  border-top-width:0.3px;
+  padding-bottom:1em;
+}
+
+.footer p{
+  font-size: 12px;
+  padding-bottom:1em;
+}

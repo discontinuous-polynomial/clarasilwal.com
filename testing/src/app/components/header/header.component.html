@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+    <div clickOutside (clickOutside)="clickedOutside()">
+      <div class="nav-menu" >
+        <div class="nav-icons">
+          <a class="logo" routerLink='/'>
+            <span>Nathanael Srawley</span>
+          </a>
+          <a class="hamburger"  style="vertical-align: middle;" (click)="toggleMenu()"> <i class="fa fa-bars"></i></a> 
+        </div>
+        
+        <div class="nav-all-items" (click)="toggleMenu()" [class.collaspe]="!isMenuOpened" >
+          <div class="nav-menu--links" *ngFor="let m of menu">
+            <div *ngIf="m.name==='CV'; else elseBlock">
+              <a [href]="m?.link" target="_blank" >
+                <span> {{m?.name}} </span>
+              </a>
+            </div>
+  
+            <ng-template #elseBlock>
+              <a class="test" [routerLink]="[m?.url]" routerLinkActive="active">
+                <span> {{m?.name}} </span>
+              </a>
+            </ng-template>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</header>
+
