@@ -1,0 +1,25 @@
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+
+
+.header-position{
+  position: fixed;
+  z-index: 100;
+  top:0;
+  top: 0;       
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .header-position{
+    position: fixed;
+  }
+}
+
+
+.pages-stack{
+  pointer-events: auto;
+  min-height: 100vh;
+}
+.footer{
+    position: relative;}

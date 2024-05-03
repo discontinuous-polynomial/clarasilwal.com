@@ -1,0 +1,287 @@
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import 'src/sass/variables';
+@import 'src/sass/mixins';
+@import 'src/sass/grid';
+@import 'src/styles.scss';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+form.contact {
+	display: flex;
+	flex-direction: column;
+    max-width: 100%;
+	width: 500px;
+	height:450px;
+	margin-left: auto;
+	margin-right: auto;
+	// margin-top: 30px;
+}
+
+.title{
+	// color: $bg-secondary;
+	color:$bg-secondary !important;
+	font-size:13px !important;
+}
+
+.option{
+	color: #bbb5b2 !important;
+	background-color: #404145;
+	font-size: 14px !important;
+}
+
+.option:active{
+	color: #bbb5b2 !important;
+	// background-color: #404145;
+}
+
+.text{
+	color: #bbb5b2 !important;
+	// font-size: 15px !important;
+	// background-color: hotpink;
+}
+
+// .mat-error{
+// 	color:rgb(167, 109, 109) !important;
+// }
+
+
+button {
+	font-size: 0.74em;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+	color: $bg-secondary;
+	margin-top:16px !important;
+
+	
+
+
+//	font-size: 0.9em;
+	// margin: 15px 44px 234234px 23px;
+	// padding-bottom: 5px;
+	// margin-bottom: 3em;
+	padding: 4px 20px;
+	height: 35px;
+
+	background-color: #404145;
+	border:none;
+	transition: 0.4s;
+	width: 100%;
+	border-radius: 2px;
+}
+
+button:hover:enabled{
+	color: $bg-secondary;
+	background-color: $bg-body;
+	border:none;
+	cursor: pointer;
+}
+
+.response-text{
+	color:$bg-secondary;
+}
+
+
+.form-style {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    // color:honeydew;
+  }
+  .form-style p{
+	// text-align: center;
+	font-size: 14px;
+    margin-bottom: 0px; 
+    color: $bg-secondary;
+  }
+
+.hidden {
+	display: none
+}
+.visible {
+	display: block
+}
+.center-text {
+	text-align: center;
+	padding-top:2em;
+}
+
+.spinner-box {
+	justify-content: center;
+	display: flex;
+	width: 380px;
+	margin-top: 2em !important;
+	max-width: 100%;
+	width: 500px;
+  }
+
+
+// ---------------------------------------------------------------------------------
+
+$primary: #c6c0ba;
+$secondary: #ffffff;
+$third: #000000;
+
+.funspinner {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	
+	&__box {
+		// text-align: center;
+	//   top: -50%;
+	//   left: -50%;
+	  width: 400px;	  
+	  height: 100px;
+	  margin: 0 0 0 -1px;
+	  display: flex;
+	  align-items: center;
+	  box-sizing: border-box;
+	  justify-content: center;
+	  position: relative;
+	  border: 0px solid rgba(255,255,255,.3);
+
+	  &>b {
+		top: 1rem;
+		left: 1rem;
+		position: absolute;
+		font-weight: normal;
+	  }
+	  
+	  &>div {
+		width: 20%;
+		height: 20%;
+		text-align: center;
+	  }
+	  
+	  svg {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	  }
+	}
+  }
+  
+
+div.sphereborder {
+	text-align: center;
+	width: 5rem;
+	
+	b {
+	  top: 50%;
+	  left: 50%;
+	  width: 2rem;
+	  height: 2rem;
+	  transform: scale(0);
+	  border-radius: 50%;
+	  position: absolute;
+	  border: 2px solid rgb(69, 67, 67);
+	  // background-color: $primary;
+	  animation: sphereborder 3s infinite linear;
+	  @for $i from 0 to 4 {
+		  &:nth-child(#{$i+1}) {
+			  animation-delay: #{$i * 0.4}s;
+		  }
+	  }
+	}
+  }
+  @keyframes sphereborder {
+	0% {
+	  width: 1rem;
+	  height: .3rem;
+	  transform: translate(-50%, -3rem)
+	} 25% {
+	  width: 4rem;
+	  height: 1.5rem;
+	  transform: translate(-50%, -2.7rem)
+	} 50% {
+	  width: 6rem;
+	  height: 3rem;
+	  transform: translate(-50%, -2rem)
+	} 75% {
+	  width: 4rem;
+	  height: 1.5rem;
+	  transform: translate(-50%, 0rem)
+	} 100% {
+	  width: 1rem;
+	  height: .3rem;
+	  transform: translate(-50%, 1rem)
+	}
+  }
+  
+// ---------------------------------------------------------------------------------
+.dot-stretching {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: $bg-secondary;
+	color: $bg-secondary;
+	transform: scale(1.25, 1.25);
+	animation: dotStretching 2s infinite ease-in;
+  }
+  
+  .dot-stretching::before, .dot-stretching::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+  }
+  
+  .dot-stretching::before {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: $bg-secondary;
+	color: $bg-secondary;
+	animation: dotStretchingBefore 2s infinite ease-in;
+  }
+  
+  .dot-stretching::after {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: $bg-secondary;
+	color: $bg-secondary;
+	animation: dotStretchingAfter 2s infinite ease-in;
+  }
+  
+  @keyframes dotStretching {
+	0% {
+	  transform: scale(1.25, 1.25);
+	}
+	50%,
+	60% {
+	  transform: scale(0.8, 0.8);
+	}
+	100% {
+	  transform: scale(1.25, 1.25);
+	}
+  }
+  
+  @keyframes dotStretchingBefore {
+	0% {
+	  transform: translate(0) scale(0.7, 0.7);
+	}
+	50%,
+	60% {
+	  transform: translate(-20px) scale(1, 1);
+	}
+	100% {
+	  transform: translate(0) scale(0.7, 0.7);
+	}
+  }
+  
+  @keyframes dotStretchingAfter {
+	0% {
+	  transform: translate(0) scale(0.7, 0.7);
+	}
+	50%,
+	60% {
+	  transform: translate(20px) scale(1, 1);
+	}
+	100% {
+	  transform: translate(0) scale(0.7, 0.7);
+	}
+  }
+

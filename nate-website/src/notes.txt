@@ -1,0 +1,23 @@
+cd testing
+ng serve --open
+ng build
+ng deploy --cname=nathanaelsrawley.com           
+
+
+
+
+
+
+
+google-sheets tutorial
+
+https://medium.com/swlh/contact-form-without-a-server-using-angular-95af74da4ed2
+
+- Start by making a copy of this spreadsheet using your Google Account.
+- Open the Script Editor by clicking “Tools” > “Script Editor”
+- Uncomment the TO_ADDRESS field and change example@email.net to your email
+- Save it by clicking “File” > “Manage versions” and typing in a version name
+- Publish it as a web application by clicking “Publish” > “Deploy as web app…” and select the latest project version
+- Authorize the application and copy the web application URL
+- Now that you’re done setting up the script that will handle all the submissions, we can start by creating a form to utilize our created script.
+
