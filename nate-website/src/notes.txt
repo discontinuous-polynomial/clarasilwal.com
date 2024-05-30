@@ -1,4 +1,3 @@
-cd testing
 ng serve --open
 ng build
 ng deploy --cname=nathanaelsrawley.com           
