@@ -544,12 +544,16 @@ our usual real-analysis tools:
     \]
     where $p_n(x)$ is a polynomial of degree $n$ whose coefficients match the coefficients of the polynomials of
     degree $k< n$.
-   \item The next condition comes from how much of our results depend on an open (or closed) subset of our
-     space, especially when studying geometric properties. For this reason, instead of looking at functions
-     that are power series, it would be better to focus on functions that are \emph{locally power series},
-     that is there exists a neighbourhood $U$ of a point such that $f|_U$ is equal to a power series.
 
-     Functions that are locally power series are called \emph{analytic}.
+    It must be noted that since we are not working with infinite sums, we must specify that we are going to
+    work with \emph{convergent} power series. Convergent power series shall depend on the domain of
+    convergence, which need not be all of $\C$ (ex. $\sum_n^\infty \frac{z^{n!}}{n^2}$).
+   \item The next condition comes from how much of our results depend on an open (or closed) subset of our
+     space (the above examples gives an example of why this is important). For this reason, instead of looking at functions
+     that are power series, it would be better to focus on functions that are \emph{locally convergent power series},
+     that is there exists a neighborhood $U$ of a point such that $f|_U$ is equal to a power series.
+
+     Functions that are locally a convergent power series are called \emph{analytic}.
 \end{enumerate}
 
 These two conditions give enough functions for the collection to be closed under uniform convergence, namely
@@ -595,11 +599,12 @@ share many similar properties:
     linear. Hence, extending to holomorphic functions does not add additional automorphisms of $\C$.
   \item The open subsets of the Zariski topology are usually \emph{dense} where its compliment is of
     codimension $\le 1$. In the case of $1$ dimension, only a finite set of points is outside any
-    (nontrivial) open set. Similarly, most holomorphic functions have an \emph{analytic continuation} that
+    (nontrivial) open set. Similarly, many holomorphic functions have an \emph{analytic continuation} that
     extends the definition of a holomorphic function defined on a (euclidean) open $U \sse \C$ to all of $\C$ minus possibly a
     countable set of (non-clustered) points\footnote{a point is said to be a \emph{cluster point} if any
       open neighborhood around the point contains infinitely many points. It is non-clustered, or sparse,
-    otherwise}!
+    otherwise}. Though it must be noted there is an analytic blocker to extend this result to all power series
+    (consider again $\sum_n^\infty z^{n!}/n^2$ which grows too quickly to be defined on $\C$).
 \end{itemize}
 
 These results should give a sense of how we have done a good job in finding the right analytic space to
