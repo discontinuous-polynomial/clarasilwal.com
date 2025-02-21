@@ -504,25 +504,25 @@ functions and ask multiple analytic questions. This approach will require a bit 
 \section{From Polynomials to Complex Analysis}
 
 We wish to be able to study polynomials through the traditional analytic tools (limits, convergence, family of
-functions, bounding, interpolation, etc). We may want to define a natural topology for polynomials and study
-the analytic properties of this topology; this is called the \emph{Zariski Topology}\footnote{It is given by
-taking the zero sets of polynomials as the collection of closed sets}. However, this approach
-has a couple of blockers, namely:
+functions, bounding, interpolation, etc). We may want to study the family of polynomials as well as define a
+natural topology for the important open/closed sets given by polynomials; this is called the
+\emph{Zariski Topology}\footnote{It is given by taking the zero sets of polynomials as the collection of
+closed sets}. However, this approach has a couple of blockers, namely:
 
 \begin{itemize}
   \item The Zariski topology is too coarse for analysis. The euclidean topology is ``made'' for
     the ideas of analysis: limits have single points, it is a metric space\footnote{Most spaces of functions
-    shall be metric spaces, though they may sometimes be limited to norms or Fr\'echet spaces}, properties such as
+    shall be metric spaces, though often they have the further structure of a Banach or Fr\'echet spaces}, properties such as
     compactness can be described using simple analytic properties such as limits or closed and bounded, and
     continuous functions have many flexible properties (consider results such as Urysohn's lemma, that any
     closed set is the zero-set of a continuous function, or a functions is continuous if and only if it
     preserves limits). These properties are \emph{not} present in the natural topology induced by polynomials,
     the Zariski topology: most open sets are \emph{dense}, limits usually converge to infinitely many points,
-    compactness becomes a much weaker property instead the stronger notion of \emph{properness} needs to be
-    used, and so forth.
+    compactness becomes a much weaker property (the stronger notion of \emph{properness} needs to be
+    used), and so forth.
 
   \item Polynomials are not \emph{complete}: The limit of polynomials can be an arbitrary continuous function
-    on a compact interval. Even more simply, if we keep adding a term $a_nx^n$ to a polynomial $a_0 + a_1x
+    on a compact interval (in the euclidean topology). Even more simply, if we keep adding a term $a_nx^n$ to a polynomial $a_0 + a_1x
     + a_2x^2 + \cdots$, the result is \emph{not} a polynomial.
   \item Similarly to the previous point, there are ``not enough'' polynomials for some fundamental results
     expected in analysis: the subset of polynomials functions on the unit ball is not closed (there are not
@@ -556,7 +556,7 @@ These two conditions give enough functions for the collection to be closed under
 if $f_n$ is a sequence of analytic functions and  $f_n \to f$ uniformally (on compact sets), then $f$ shall
 still be analytic by Weiestrass Convergence Theorem. This family of functions on an open subset
 $U \sse \C$ is called the \emph{Holomorphic functions}, and we shall denote it as $\CH(U)$. The family
-$\CH(U)$ forms a complete metric space\footnote{Even stronger it forms a Fr\'echet space, which ought to be
+$\CH(U)$ forms a complete metric space\footnote{Even stronger, it forms a Fr\'echet space, which ought to be
   thought as spaces that are not nice enough to define a single norm, but nice enough to replace the norm by a
 sequence of compatible semi-norms}, giving us a natural space in which we may ask analytic questions!
 
@@ -596,7 +596,7 @@ share many similar properties:
   \item The open subsets of the Zariski topology are usually \emph{dense} where its compliment is of
     codimension $\le 1$. In the case of $1$ dimension, only a finite set of points is outside any
     (nontrivial) open set. Similarly, most holomorphic functions have an \emph{analytic continuation} that
-    extends the definition of a holomorphic function defined on $U \sse \C$ to all of $\C$ minus possibly a
+    extends the definition of a holomorphic function defined on a (euclidean) open $U \sse \C$ to all of $\C$ minus possibly a
     countable set of (non-clustered) points\footnote{a point is said to be a \emph{cluster point} if any
       open neighborhood around the point contains infinitely many points. It is non-clustered, or sparse,
     otherwise}!
@@ -615,7 +615,7 @@ Through it, we can find many important results about the polynomials that govern
 Unfortunately, going into details would require going over the connection between polynomials and primes,
 a topic better left for another blog, (or to get the full details
 see~\cite[chapter~3]{nathanaelchwojko-srawleyEverythingYouNeed} for my exposition on this topic). More
-generally number theory, through the use of analytic number theory and Elliptic functions, has produced some
+generally number theory, through the use of analytic number theory and elliptic functions, has produced some
 incredible results in the theory of polynomials from the theory of complex analysis.
 
 
@@ -627,7 +627,7 @@ that $f: \C \to \C$ is \emph{complex differentiable} or \emph{holomorphic} at $z
 derivative-limit exists, that is holomorphic function are locally complex-linear. It is then
 proven that a function is holomorphic on open $U \sse \C$ if and only if it is locally a power series. This
 approach is certainly pedagogically better as a lot of the intuition given by the above extensively leans on
-knowledge of real analysis and relies only on calculus. An advantage of the pedagogical approach is the direct
+knowledge of real analysis, while latter relies only on calculus. An advantage of the pedagogical approach is the direct
 connection to the geometric properties of holomorphic functions (as they allow us to define differential forms),
 and the direct connection to the ``dynamics'' of holomorphic functions (they contribute to the theory of
 harmonic functions). As holomorphic functions is the analytic setting of polynomials, we can ask how complex
@@ -647,16 +647,16 @@ $1$-form $\omega$ on $\R^2$ is closed if and only if $\omega = f(z)dz$ for a hol
 ($1$-dimensional) holomorphic functions can be defined purely geometrically!
 
 We may hope that the study of $1$-dimensional complex manifolds, historically called Riemann surfaces, gives information
-about polynomials. In fact, an absolutely incredible connection happens. When working with
+about polynomials. In fact, an absolutely incredible connection happens. First, when working with
 \emph{compact sets} we usually expect a level of finiteness with what we are working with, be it boundedness,
-growth, extreme values, and so forth. In the case of compact compact Riemann surfaces, the functions and
+growth, extreme values, and so forth. In the case of compact Riemann surfaces, the functions and
 characterization of them reduces to the study of polynomials! In particular:
 
 \begin{center}
     \addtolength{\leftskip}{2cm}  % Adjust left margin
     \addtolength{\rightskip}{2cm} % Adjust right margin
-  Every compact Riemann surface is an algebraic curve, and two compact Riemann surfaces are (real)-diffeomorphic if
-  they have the same number of holes (their genus is equal)
+  Every compact Riemann surface is the zero set of an algebraic curve, and meromorphic functions reduce to
+  rational polynomials
 \end{center}
 
 These results have major consequences in both algebra in geometry! For example, though not immediately
@@ -677,7 +677,7 @@ the \emph{Cauchy-Riemann equations}
 \[
   \frac{\partial f}{\partial x} = - i\frac{\partial f}{\partial y}
 \]
-In particular, if $f = u+iv$ is the decomposition of $f$ into to real functions, $u$ is a \emph{harmonic
+In particular, if $f = u+iv$ is the decomposition of $f$ into to real functions, $u$ and $v$ are \emph{harmonic
 function}:
 \[
   \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = \Delta u = 0
@@ -685,7 +685,7 @@ function}:
 where $\Delta$ is the Laplace operator. A classical exercise is to show that every harmonic function is the
 real part of a holomorphic function. Thus, holomorphic functions have the \emph{dynamics} of harmonic PDEs,
 that is, given a point $z \in U \sse \C$, the properties of the paths as this point travels in the field given
-by $f$ will behave like those functions satisfying the Laplace operator. Hence, complex functions have the
+by $f$ will behave like those functions satisfying the Laplace operator. Hence, complex functions have
 \emph{harmonic dynamics}! A couple of striking consequences are shown in every first course in
 complex analysis:
 
